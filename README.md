@@ -95,7 +95,7 @@ void logBasee()
      else
      {
          result = log(a);
-        printf("\nResult = %lf",result);
+        printf("Result = %lf",result);
     }
 }
 void logBasee10()
@@ -110,7 +110,7 @@ void logBasee10()
     else
     {
         result = log10(a);
-        printf("\nResult = %lf",result);
+        printf("Result = %lf",result);
     }
 }
 
@@ -137,7 +137,7 @@ void power()
     printf("Enter base and exponent: ");
     scanf("%lf %lf", &base, &exponent);
     result = pow(base, exponent);
-    printf("%.1lf^%.1lf = .2lf\n", result);
+    printf("Result = %.lf\n", result);
 }
 
 void cubeRoot()
@@ -183,12 +183,12 @@ void matrix_addition()
     printf("Enter elements of the first matrix:\n");
     for (int i = 0; i < rows; i++)
         for (int j = 0; j < cols; j++)
-            scanf("%lf", &matrix1[i][j]);
+            scanf("%d", &matrix1[i][j]);
 
     printf("Enter elements of the second matrix:\n");
     for (int i = 0; i < rows; i++)
         for (int j = 0; j < cols; j++)
-            scanf("%lf", &matrix2[i][j]);
+            scanf("%d", &matrix2[i][j]);
 
 
     for (int i = 0; i < rows; i++)
@@ -200,7 +200,7 @@ void matrix_addition()
     for (int i = 0; i < rows; i++)
         {
         for (int j = 0; j < cols; j++)
-            printf("%.2f ", result[i][j]);
+            printf("%d ", result[i][j]);
         printf("\n");
     }
 }
@@ -222,12 +222,12 @@ void matrix_subtraction()
     printf("Enter elements of the first matrix:\n");
     for (int i = 0; i < rows; i++)
         for (int j = 0; j < cols; j++)
-            scanf("%lf", &matrix1[i][j]);
+            scanf("%d", &matrix1[i][j]);
 
     printf("Enter elements of the second matrix:\n");
     for (int i = 0; i < rows; i++)
         for (int j = 0; j < cols; j++)
-            scanf("%lf", &matrix2[i][j]);
+            scanf("%d", &matrix2[i][j]);
 
     for (int i = 0; i < rows; i++)
         for (int j = 0; j < cols; j++)
@@ -236,7 +236,7 @@ void matrix_subtraction()
     printf("Result of matrix subtraction:\n");
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++)
-            printf("%.2f ", result[i][j]);
+            printf("%d ", result[i][j]);
         printf("\n");
     }
 }
