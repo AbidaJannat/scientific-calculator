@@ -7,32 +7,69 @@
 
 
 void addition()
- {
-    int a, b, result;
-    printf("Enter two numbers: ");
-    scanf("%d %d", &a, &b);
-    result = a + b;
+{
+    int n, result = 0;
+
+    printf("Enter the number of values to add: ");
+    scanf("%d", &n);
+
+    int numbers[n];
+
+    printf("Enter %d numbers: ", n);
+    for (int i = 0; i < n; i++)
+        {
+        scanf("%d", &numbers[i]);
+    }
+    for (int i = 0; i < n; i++)
+     {
+        result += numbers[i];
+    }
+
     printf("Result: %d\n", result);
 }
-
-
 void subtraction()
 {
-    int a, b, result;
-    printf("Enter two numbers: ");
-    scanf("%d %d", &a, &b);
-    result = a - b;
+    int n, result;
+    printf("Enter the number of values to subtract: ");
+    scanf("%d", &n);
+
+    int numbers[n];
+
+    printf("Enter the numbers: ");
+    for (int i = 0; i < n; i++)
+        {
+        scanf("%d", &numbers[i]);
+    }
+
+    result = numbers[0];
+
+    for (int i = 1; i < n; i++)
+        {
+        result -= numbers[i];
+    }
     printf("Result: %d\n", result);
 }
-
-
 void multiplication()
 {
-    int a, b, result;
-    printf("Enter two numbers: ");
-    scanf("%d %d", &a, &b);
-    result = a * b;
-    printf("Result: %d\n", result);
+    int n;
+    long long result = 1;
+
+    printf("Enter the number of values to multiply: ");
+    scanf("%d", &n);
+
+    int numbers[n];
+
+    printf("Enter the numbers: ");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &numbers[i]);
+    }
+
+    for (int i = 0; i < n; i++)
+        {
+        result *= numbers[i];
+    }
+
+    printf("Result: %lld\n", result);
 }
 
 
