@@ -6,32 +6,69 @@
 
 
 void addition()
- {
-    int a, b, result;
-    printf("Enter two numbers: ");
-    scanf("%d %d", &a, &b);
-    result = a + b;
+{
+    int n, result = 0;
+
+    printf("Enter the number of values to add: ");
+    scanf("%d", &n);
+
+    int numbers[n];
+
+    printf("Enter %d numbers: ", n);
+    for (int i = 0; i < n; i++)
+        {
+        scanf("%d", &numbers[i]);
+    }
+    for (int i = 0; i < n; i++)
+     {
+        result += numbers[i];
+    }
+
     printf("Result: %d\n", result);
 }
-
-
 void subtraction()
 {
-    int a, b, result;
-    printf("Enter two numbers: ");
-    scanf("%d %d", &a, &b);
-    result = a - b;
+    int n, result;
+    printf("Enter the number of values to subtract: ");
+    scanf("%d", &n);
+
+    int numbers[n];
+
+    printf("Enter the numbers: ");
+    for (int i = 0; i < n; i++)
+        {
+        scanf("%d", &numbers[i]);
+    }
+
+    result = numbers[0];
+
+    for (int i = 1; i < n; i++)
+        {
+        result -= numbers[i];
+    }
     printf("Result: %d\n", result);
 }
-
-
 void multiplication()
 {
-    int a, b, result;
-    printf("Enter two numbers: ");
-    scanf("%d %d", &a, &b);
-    result = a * b;
-    printf("Result: %d\n", result);
+    int n;
+    long long result = 1;
+
+    printf("Enter the number of values to multiply: ");
+    scanf("%d", &n);
+
+    int numbers[n];
+
+    printf("Enter the numbers: ");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &numbers[i]);
+    }
+
+    for (int i = 0; i < n; i++)
+        {
+        result *= numbers[i];
+    }
+
+    printf("Result: %lld\n", result);
 }
 
 
@@ -183,12 +220,12 @@ void matrix_addition()
     printf("Enter elements of the first matrix:\n");
     for (int i = 0; i < rows; i++)
         for (int j = 0; j < cols; j++)
-            scanf("%d", &matrix1[i][j]);
+            scanf("%lf", &matrix1[i][j]);
 
     printf("Enter elements of the second matrix:\n");
     for (int i = 0; i < rows; i++)
         for (int j = 0; j < cols; j++)
-            scanf("%d", &matrix2[i][j]);
+            scanf("%lf", &matrix2[i][j]);
 
 
     for (int i = 0; i < rows; i++)
@@ -200,7 +237,7 @@ void matrix_addition()
     for (int i = 0; i < rows; i++)
         {
         for (int j = 0; j < cols; j++)
-            printf("%d ", result[i][j]);
+            printf("%.f ", result[i][j]);
         printf("\n");
     }
 }
@@ -222,12 +259,12 @@ void matrix_subtraction()
     printf("Enter elements of the first matrix:\n");
     for (int i = 0; i < rows; i++)
         for (int j = 0; j < cols; j++)
-            scanf("%d", &matrix1[i][j]);
+            scanf("%lf", &matrix1[i][j]);
 
     printf("Enter elements of the second matrix:\n");
     for (int i = 0; i < rows; i++)
         for (int j = 0; j < cols; j++)
-            scanf("%d", &matrix2[i][j]);
+            scanf("%lf", &matrix2[i][j]);
 
     for (int i = 0; i < rows; i++)
         for (int j = 0; j < cols; j++)
@@ -236,7 +273,7 @@ void matrix_subtraction()
     printf("Result of matrix subtraction:\n");
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++)
-            printf("%d ", result[i][j]);
+            printf("%.f ", result[i][j]);
         printf("\n");
     }
 }
